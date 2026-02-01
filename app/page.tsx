@@ -148,10 +148,10 @@ export default function Home() {
             <span className="block text-4xl md:text-5xl mt-4 gradient-text">(2026)</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-slide-up">
-            How I Cracked Senior PM & Director Offers in an AI-Driven Hiring Market
+            How I Cracked Senior PM & Director Offers in a Difficult, AI-Driven Hiring Market
           </p>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            A practical, honest breakdown of PM hiring — built from real interviews, real rejections, and real offers.
+            A practical, honest breakdown of PM hiring built from real interviews, real rejections, and real offers.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -220,7 +220,7 @@ export default function Home() {
           <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
             <p>
               You're a Product Manager. You've shipped features, led cross-functional teams, and delivered results. 
-              You've done everything "right" — optimized your resume, networked strategically, prepared for interviews. 
+              You've done everything "right": optimized your resume, networked strategically, prepared for interviews. 
               Yet you're hearing nothing back.
             </p>
             <p>
@@ -258,7 +258,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold mb-4">The Beginning: Multiple Loops, Multiple Rejections</h3>
               <p className="text-gray-300 leading-relaxed">
                 I interviewed extensively across top-tier companies. Some loops ended after the recruiter screen. 
-                Others went deep — product sense, execution, behavioral, technical — only to end in silence or rejection. 
+                Others went deep (product sense, execution, behavioral, technical) only to end in silence or rejection. 
                 The pattern was consistent: strong resume, good conversations, but no offer.
               </p>
             </div>
@@ -280,9 +280,9 @@ export default function Home() {
                 not employers. I want to be explicit about this because it demonstrates:
               </p>
               <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                <li>Interview mastery — the ability to navigate complex loops successfully</li>
-                <li>Market calibration — understanding where I stood in the competitive landscape</li>
-                <li>Decision-making clarity — choosing based on role scope, leadership opportunity, and long-term impact</li>
+                <li>Interview mastery: the ability to navigate complex loops successfully</li>
+                <li>Market calibration: understanding where I stood in the competitive landscape</li>
+                <li>Decision-making clarity: choosing based on role scope, leadership opportunity, and long-term impact</li>
               </ul>
             </div>
 
@@ -392,7 +392,7 @@ export default function Home() {
                 <span className="text-2xl">🛡️</span>
                 <div>
                   <p className="font-semibold mb-1">Recruiters optimize for risk reduction</p>
-                  <p className="text-gray-400">They're not looking for the best candidate — they're looking for the safest hire.</p>
+                  <p className="text-gray-400">They're not looking for the best candidate. They're looking for the safest hire.</p>
                 </div>
               </div>
             </div>
@@ -434,7 +434,7 @@ export default function Home() {
                 <div>
                   <h4 className="font-semibold text-lg mb-2">Title Normalization</h4>
                   <p className="text-gray-400">
-                    "Product Manager" vs "Product Lead" vs "PM" — recruiters normalize these. 
+                    "Product Manager" vs "Product Lead" vs "PM": recruiters normalize these. 
                     Use the most common title in your target market.
                   </p>
                 </div>
@@ -589,7 +589,7 @@ export default function Home() {
               Clear Stance
             </p>
             <p className="text-2xl font-bold text-center gradient-text mb-4">
-              Use AI to sharpen thinking — not to outsource it.
+              Use AI to sharpen thinking, not to outsource it.
             </p>
             <p className="text-gray-300 text-center leading-relaxed">
               Interview-coaching tools can be valuable for preparation. But in the interview itself, 
@@ -618,13 +618,13 @@ export default function Home() {
                 your visibility. Have a template application ready, but customize it for each role.
               </p>
               <p className="text-gray-300 leading-relaxed mb-3">
-                <strong className="text-white">Equally important:</strong> Don't just apply — leverage your connections for referrals. 
+                <strong className="text-white">Equally important:</strong> Don't just apply. Leverage your connections for referrals. 
                 Connect with people at target companies, ask them to refer you, and ask them to start a thread with the hiring manager 
                 to introduce you. A warm introduction dramatically increases your chances of getting past the initial screening.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 <strong className="text-white">For absolute fit roles:</strong> When a position is a perfect match to your experience, 
-                go the extra mile — reach out to the hiring manager, check their product demo, and send 3-4 feature ideas with a quick 
+                go the extra mile: reach out to the hiring manager, check their product demo, and send 3-4 feature ideas with a quick 
                 prototype or presentation. This technique has helped me secure job offers in the past.
               </p>
             </div>
@@ -633,7 +633,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-3 text-blue-400">2. Ethical Resume Tailoring & LinkedIn Matching</h3>
               <p className="text-gray-300 leading-relaxed mb-3">
                 Tailor your resume to highlight relevant experience, but never fabricate. Use the job description's 
-                language to align your achievements with what they're looking for. This isn't gaming the system — 
+                language to align your achievements with what they're looking for. This isn't gaming the system. 
                 it's clear communication.
               </p>
               <p className="text-gray-300 leading-relaxed">
@@ -660,8 +660,8 @@ export default function Home() {
               </p>
               <p className="text-gray-300 leading-relaxed">
                 This approach gives you a significant upper hand and dramatically higher chances of getting selected for 
-                the recruiter round. It shows genuine interest, product thinking, and initiative — exactly what hiring 
-                managers are looking for. Don't just ask for referrals — demonstrate value first.
+                the recruiter round. It shows genuine interest, product thinking, and initiative. That's exactly what hiring 
+                managers are looking for. Don't just ask for referrals. Demonstrate value first.
               </p>
             </div>
 
@@ -712,11 +712,11 @@ export default function Home() {
               <h3 className="text-2xl font-semibold mb-4">Story Bank Strategy</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
                 <strong className="text-white">Step 1:</strong> Take one full day to remember all the projects you have worked on, big or small. 
-                Don't skip anything — even small projects can demonstrate important skills.
+                Don't skip anything. Even small projects can demonstrate important skills.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 <strong className="text-white">Step 2:</strong> Use 5-10 minutes to write down each story. Capture the context, your actions, 
-                and the impact. Don't worry about perfecting it yet — just get it documented.
+                and the impact. Don't worry about perfecting it yet. Just get it documented.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 <strong className="text-white">Step 3:</strong> First use your own judgment to determine which story will be best suitable 
@@ -769,7 +769,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold mb-4">AI-Powered Interview Tools: Why Honesty Matters</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
                 There are companies using AI tools to record interviews and generate insights about candidates. 
-                These tools are getting smarter — if you tell one story to an interviewer and in the next round you 
+                These tools are getting smarter. If you tell one story to an interviewer and in the next round you 
                 say something different for the same story, the AI will catch the inconsistency and flag you as a candidate.
               </p>
               <p className="text-gray-300 leading-relaxed">
@@ -787,7 +787,7 @@ export default function Home() {
               <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
                 <li><strong>Data quality:</strong> How do you ensure training data is representative and unbiased?</li>
                 <li><strong>Trade-offs:</strong> Model accuracy vs. latency, cost vs. performance</li>
-                <li><strong>Model evaluation:</strong> Beyond accuracy — fairness, interpretability, robustness</li>
+                <li><strong>Model evaluation:</strong> Beyond accuracy: fairness, interpretability, robustness</li>
                 <li><strong>"Vibe coding":</strong> Reasoning about AI systems is more important than syntax. 
                 You don't need to be a data scientist, but you need to think clearly about AI product challenges.</li>
               </ul>
@@ -848,7 +848,7 @@ export default function Home() {
             <p className="text-gray-300 leading-relaxed">
               <strong className="text-white">Remember:</strong> Each round is testing something specific. 
               Understanding what they're actually evaluating helps you prepare more effectively and reduces anxiety. 
-              You're not trying to be perfect — you're trying to demonstrate fit.
+              You're not trying to be perfect. You're trying to demonstrate fit.
             </p>
           </div>
         </div>
@@ -868,7 +868,7 @@ export default function Home() {
             <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-8 border border-blue-500/30">
               <h3 className="text-2xl font-semibold mb-4">Rejection as Feedback Loops</h3>
               <p className="text-gray-300 leading-relaxed">
-                Rejection isn't failure — it's feedback. Each rejection tells you something: maybe the role wasn't a fit, 
+                Rejection isn't failure. It's feedback. Each rejection tells you something: maybe the role wasn't a fit, 
                 maybe your story wasn't clear, maybe the timing was off. Treat rejections as data points, not personal judgments. 
                 Use them to refine your approach.
               </p>
@@ -878,7 +878,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold mb-4">Process &gt; Outcomes</h3>
               <p className="text-gray-300 leading-relaxed">
                 You can't control whether you get an offer, but you can control your process. Focus on what you can influence: 
-                your preparation, your applications, your follow-ups. If you trust your process, the outcomes will follow — 
+                your preparation, your applications, your follow-ups. If you trust your process, the outcomes will follow, 
                 even if it takes longer than expected.
               </p>
             </div>
@@ -886,7 +886,7 @@ export default function Home() {
             <div className="bg-gradient-to-r from-pink-900/20 to-orange-900/20 rounded-lg p-8 border border-pink-500/30">
               <h3 className="text-2xl font-semibold mb-4">Consistency Beats Intensity</h3>
               <p className="text-gray-300 leading-relaxed">
-                Job searching is a marathon, not a sprint. Consistent, daily effort — even if it's just 30 minutes — 
+                Job searching is a marathon, not a sprint. Consistent, daily effort (even if it's just 30 minutes) 
                 is more effective than intense bursts followed by burnout. Build sustainable habits: apply to one role per day, 
                 network with one person per week, practice one story per day.
               </p>
@@ -895,7 +895,7 @@ export default function Home() {
             <div className="bg-gradient-to-r from-orange-900/20 to-yellow-900/20 rounded-lg p-8 border border-orange-500/30">
               <h3 className="text-2xl font-semibold mb-4">Short, Grounded Reflections</h3>
               <p className="text-gray-300 leading-relaxed italic">
-                "This is hard. It's supposed to be hard. You're not broken — the process is just competitive. 
+                "This is hard. It's supposed to be hard. You're not broken. The process is just competitive. 
                 Keep going. Trust your process. One application, one interview, one conversation at a time."
               </p>
             </div>
@@ -958,7 +958,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-orange-900/30 to-pink-900/30 rounded-lg p-6 border border-orange-500/30 hover:border-orange-400 transition-all md:col-span-2">
               <h3 className="text-xl font-semibold mb-3">📋 PM Framework Cheat Sheets</h3>
               <p className="text-gray-300 mb-4 text-sm">
-                Quick reference guides for CIRCLES, RICE, HEART, and other PM frameworks — with customization tips.
+                Quick reference guides for CIRCLES, RICE, HEART, and other PM frameworks, with customization tips.
               </p>
               <button className="text-orange-400 hover:text-orange-300 text-sm font-semibold">
                 Download →
