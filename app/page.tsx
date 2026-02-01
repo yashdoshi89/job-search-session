@@ -373,8 +373,12 @@ export default function Home() {
               <div className="flex items-start gap-4">
                 <span className="text-2xl">📊</span>
                 <div>
-                  <p className="font-semibold mb-1">Inbound applications rarely convert</p>
-                  <p className="text-gray-400">Most successful PMs are discovered, not applied.</p>
+                  <p className="font-semibold mb-1">Conversion rate for inbound applications is lower</p>
+                  <p className="text-gray-400 mb-2">
+                    If you don't have referrals or an exact match for skills, the conversion rate is significantly lower. 
+                    In that case, you have to somehow prove yourself why you are the best fit for this role. 
+                    Most successful PMs are discovered, not applied.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -621,11 +625,16 @@ export default function Home() {
             </div>
 
             <div className="bg-dark-surface rounded-lg p-6 border border-gray-800">
-              <h3 className="text-xl font-semibold mb-3 text-blue-400">2. Ethical Resume Tailoring</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-xl font-semibold mb-3 text-blue-400">2. Ethical Resume Tailoring & LinkedIn Matching</h3>
+              <p className="text-gray-300 leading-relaxed mb-3">
                 Tailor your resume to highlight relevant experience, but never fabricate. Use the job description's 
                 language to align your achievements with what they're looking for. This isn't gaming the system — 
                 it's clear communication.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                <strong className="text-white">Critical:</strong> Your LinkedIn and resume should match. If you have AI generate a resume 
+                based on a job description and those skills are not present on your LinkedIn profile, it may be difficult to get shortlisted. 
+                Recruiters cross-reference your resume with your LinkedIn profile, and inconsistencies raise red flags.
               </p>
             </div>
 
@@ -677,9 +686,23 @@ export default function Home() {
             <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-lg p-8 border border-purple-500/30">
               <h3 className="text-2xl font-semibold mb-4">Story Bank Strategy</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Build a bank of 8-12 stories that cover different scenarios: launching a product, handling conflict, 
-                making a tough decision, learning from failure, working with engineering, etc. Each story should be 
-                structured with context, action, and impact.
+                <strong className="text-white">Step 1:</strong> Take one full day to remember all the projects you have worked on, big or small. 
+                Don't skip anything — even small projects can demonstrate important skills.
+              </p>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                <strong className="text-white">Step 2:</strong> Use 5-10 minutes to write down each story. Capture the context, your actions, 
+                and the impact. Don't worry about perfecting it yet — just get it documented.
+              </p>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                <strong className="text-white">Step 3:</strong> First use your own judgment to determine which story will be best suitable 
+                for what type of interview questions. Think about what each story demonstrates: leadership, conflict resolution, 
+                decision-making, learning, etc.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                <strong className="text-white">Step 4:</strong> Only after you've done your own analysis, then ask AI to help refine, 
+                structure, or suggest which stories work best for specific questions. Build a bank of 8-12 stories that cover different 
+                scenarios: launching a product, handling conflict, making a tough decision, learning from failure, working with engineering, etc. 
+                Each story should be structured with context, action, and impact.
               </p>
             </div>
 
@@ -714,6 +737,20 @@ export default function Home() {
               <p className="text-gray-300 leading-relaxed mb-4">
                 Know frameworks like CIRCLES, RICE, or HEART, but don't recite them. Adapt them to the question. 
                 Show that you understand the underlying principles, not just the acronym.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-lg p-8 border border-red-500/30">
+              <h3 className="text-2xl font-semibold mb-4">AI-Powered Interview Tools: Why Honesty Matters</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                There are companies using AI tools to record interviews and generate insights about candidates. 
+                These tools are getting smarter — if you tell one story to an interviewer and in the next round you 
+                say something different for the same story, the AI will catch the inconsistency and flag you as a candidate.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                This is why being honest and really knowing what you talk about (both AI and PM skills) is much more 
+                important in this era. Don't fabricate stories or exaggerate your experience. Authenticity and consistency 
+                are now being measured by AI systems, not just human interviewers.
               </p>
             </div>
 
