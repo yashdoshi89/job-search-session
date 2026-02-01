@@ -6,13 +6,59 @@ import Image from 'next/image'
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [imageError, setImageError] = useState(false)
+  const [scrollY, setScrollY] = useState(0)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [tilt, setTilt] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
+      setScrollY(window.scrollY)
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+      
+      // Get hero section element
+      const hero = document.getElementById('hero')
+      if (!hero) return
+      
+      const rect = hero.getBoundingClientRect()
+      const centerX = rect.left + rect.width / 2
+      const centerY = rect.top + rect.height / 2
+      
+      // Calculate distance from center (normalized to -1 to 1)
+      const x = (e.clientX - centerX) / (rect.width / 2)
+      const y = (e.clientY - centerY) / (rect.height / 2)
+      
+      // Apply tilt (max 15 degrees)
+      setTilt({
+        x: y * 15, // Rotate on X axis based on Y position (vertical mouse movement)
+        y: -x * 15  // Rotate on Y axis based on X position (horizontal mouse movement)
+      })
+    }
+
+    const handleMouseLeave = () => {
+      // Reset tilt when mouse leaves hero section
+      setTilt({ x: 0, y: 0 })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove, { passive: true })
+    const hero = document.getElementById('hero')
+    if (hero) {
+      hero.addEventListener('mouseleave', handleMouseLeave)
+    }
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      if (hero) {
+        hero.removeEventListener('mouseleave', handleMouseLeave)
+      }
+    }
   }, [])
 
   return (
@@ -33,14 +79,70 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Section 1: Hero */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        {/* Gradient Blobs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-500 gradient-blob"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 gradient-blob" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 gradient-blob" style={{ animationDelay: '4s' }}></div>
+      {/* Section 1: Hero with Parallax and 3D Effect */}
+      <section 
+        id="hero" 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+        style={{ perspective: '1000px' }}
+      >
+        {/* Gradient Blobs with Parallax and 3D */}
+        <div 
+          className="absolute top-20 left-10 w-96 h-96 bg-purple-500 gradient-blob hero-3d"
+          style={{
+            transform: `
+              translateY(${scrollY * 0.3}px) 
+              translateX(${scrollY * 0.1}px)
+              translateZ(${tilt.y * 2}px)
+              rotateX(${tilt.x * 0.3}deg)
+              rotateY(${tilt.y * 0.3}deg)
+            `,
+            transition: 'transform 0.1s ease-out'
+          }}
+        ></div>
+        <div 
+          className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 gradient-blob hero-3d" 
+          style={{ 
+            animationDelay: '2s',
+            transform: `
+              translateY(${scrollY * 0.4}px) 
+              translateX(${-scrollY * 0.15}px)
+              translateZ(${-tilt.y * 2}px)
+              rotateX(${tilt.x * 0.4}deg)
+              rotateY(${-tilt.y * 0.4}deg)
+            `,
+            transition: 'transform 0.1s ease-out'
+          }}
+        ></div>
+        <div 
+          className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 gradient-blob hero-3d" 
+          style={{ 
+            animationDelay: '4s',
+            transform: `
+              translateY(${scrollY * 0.25}px) 
+              translateX(${scrollY * 0.2}px)
+              translateZ(${tilt.x * 2}px)
+              rotateX(${-tilt.x * 0.2}deg)
+              rotateY(${tilt.y * 0.2}deg)
+            `,
+            transition: 'transform 0.1s ease-out'
+          }}
+        ></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        {/* Content with Parallax and 3D Tilt */}
+        <div 
+          className="relative z-10 max-w-4xl mx-auto px-6 text-center parallax-container hero-3d"
+          style={{
+            transform: `
+              translateY(${Math.min(scrollY * 0.3, typeof window !== 'undefined' ? window.innerHeight * 0.2 : 200)}px)
+              translateZ(0)
+              rotateX(${tilt.x}deg)
+              rotateY(${tilt.y}deg)
+            `,
+            opacity: scrollY < 800 ? Math.max(0.7, 1 - scrollY / 1000) : 0,
+            transition: 'transform 0.1s ease-out, opacity 0.1s ease-out',
+            transformStyle: 'preserve-3d'
+          }}
+        >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
             The PM Interview Playbook
             <span className="block text-4xl md:text-5xl mt-4 gradient-text">(2026)</span>
@@ -71,7 +173,19 @@ export default function Home() {
 
           <div className="flex flex-col items-center space-y-4">
             <div className="flex items-center gap-4">
-              <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-purple-500/30 shadow-lg bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
+              <div 
+                className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-purple-500/30 shadow-lg bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center"
+                style={{
+                  transform: `
+                    translateY(${scrollY * 0.2}px) 
+                    scale(${1 + scrollY * 0.0001})
+                    rotateX(${tilt.x * 0.5}deg)
+                    rotateY(${tilt.y * 0.5}deg)
+                  `,
+                  transition: 'transform 0.1s ease-out',
+                  transformStyle: 'preserve-3d'
+                }}
+              >
                 {!imageError ? (
                   <img
                     src="/profile-photo.jpg"
@@ -847,8 +961,12 @@ export default function Home() {
 
           <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-lg p-6 border border-purple-500/30 mb-6">
             <p className="text-lg font-semibold mb-2 text-purple-400">Spotnana is Hiring</p>
+            <p className="text-gray-300 leading-relaxed mb-3">
+              We have <strong className="text-white">100 openings approved</strong> in total, primarily in <strong className="text-white">Product Management and Engineering</strong>. 
+              Openings will be majorly in <strong className="text-white">India</strong> and some in the <strong className="text-white">USA</strong>.
+            </p>
             <p className="text-gray-300 leading-relaxed">
-              We're actively hiring Product Managers and AI Engineers at Spotnana. We'll be posting all open positions 
+              We have offices in <strong className="text-white">Mumbai, Pune, and Bangalore</strong>. We'll be posting all open positions 
               in the coming weeks. If you're interested in joining our team, feel free to reach out.
             </p>
           </div>
