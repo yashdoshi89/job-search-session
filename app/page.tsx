@@ -5,6 +5,7 @@ import Image from 'next/image'
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [imageError, setImageError] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,14 +71,20 @@ export default function Home() {
 
           <div className="flex flex-col items-center space-y-4">
             <div className="flex items-center gap-4">
-              <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-purple-500/30 shadow-lg">
-                <Image
-                  src="/profile-photo.jpg"
-                  alt="Yash Doshi"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-purple-500/30 shadow-lg bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
+                {!imageError ? (
+                  <img
+                    src="/profile-photo.jpg"
+                    alt="Yash Doshi"
+                    className="object-cover w-full h-full object-top"
+                    style={{ objectPosition: 'top center' }}
+                    onError={() => setImageError(true)}
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-white text-2xl md:text-3xl font-bold">
+                    YD
+                  </div>
+                )}
               </div>
               <div className="text-left space-y-1">
                 <p className="text-lg md:text-xl font-semibold">Yash Doshi</p>
@@ -682,7 +689,7 @@ export default function Home() {
             </div>
 
             <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-lg p-8 border border-purple-500/30">
-              <h3 className="text-2xl font-semibold mb-4">Process > Outcomes</h3>
+              <h3 className="text-2xl font-semibold mb-4">Process &gt; Outcomes</h3>
               <p className="text-gray-300 leading-relaxed">
                 You can't control whether you get an offer, but you can control your process. Focus on what you can influence: 
                 your preparation, your applications, your follow-ups. If you trust your process, the outcomes will follow — 
