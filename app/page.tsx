@@ -43,7 +43,7 @@ export default function Home() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
             The PM Interview Playbook
-            <span className="block text-4xl md:text-5xl mt-4 gradient-text">(2025)</span>
+            <span className="block text-4xl md:text-5xl mt-4 gradient-text">(2026)</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-slide-up">
             How I Cracked Senior PM & Director Offers in an AI-Driven Hiring Market
@@ -117,7 +117,7 @@ export default function Home() {
               This is not a motivation talk. It's a system you can trust.
             </p>
             <p>
-              This page exists because PM hiring in 2025 operates differently than it did even two years ago. 
+              This page exists because PM hiring in 2026 operates differently than it did even two years ago. 
               Recruiters use AI filters. Interview loops test different skills. The bar has shifted. 
               And most advice out there is either outdated or generic.
             </p>
@@ -190,11 +190,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 4: The Reality of PM Hiring in 2025 */}
+      {/* Section 4: The Reality of PM Hiring in 2026 */}
       <section id="insights" className="relative py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            The Reality of PM Hiring in 2025
+            The Reality of PM Hiring in 2026
           </h2>
           <p className="text-center text-gray-400 mb-12">
             Reset Expectations
@@ -494,10 +494,15 @@ export default function Home() {
 
           <div className="space-y-6">
             <div className="bg-dark-surface rounded-lg p-6 border border-gray-800">
-              <h3 className="text-xl font-semibold mb-3 text-purple-400">1. Applying Within 24 Hours</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Job postings get hundreds of applications in the first 48 hours. Apply within 24 hours to maximize 
+              <h3 className="text-xl font-semibold mb-3 text-purple-400">1. Applying Within 24-48 Hours & Leveraging Referrals</h3>
+              <p className="text-gray-300 leading-relaxed mb-3">
+                Job postings get hundreds of applications in the first 48 hours. Apply within 24-48 hours to maximize 
                 your visibility. Have a template application ready, but customize it for each role.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                <strong className="text-white">Equally important:</strong> Don't just apply — leverage your connections for referrals. 
+                Connect with people at target companies, ask them to refer you, and ask them to start a thread with the hiring manager 
+                to introduce you. A warm introduction dramatically increases your chances of getting past the initial screening.
               </p>
             </div>
 
@@ -519,11 +524,16 @@ export default function Home() {
             </div>
 
             <div className="bg-dark-surface rounded-lg p-6 border border-gray-800">
-              <h3 className="text-xl font-semibold mb-3 text-pink-400">4. Networking with Intent</h3>
+              <h3 className="text-xl font-semibold mb-3 text-pink-400">4. Personalized Outreach (Not Generic Emails)</h3>
+              <p className="text-gray-300 leading-relaxed mb-3">
+                One thing I've done throughout my career: I never send a generic email introducing myself. Instead, 
+                I spend 5-10 minutes learning about their product, understanding their challenges, and providing a few 
+                concrete ideas about how they could improve their product or implement specific features.
+              </p>
               <p className="text-gray-300 leading-relaxed">
-                Reach out to people at target companies, but do it thoughtfully. Share why you're interested, 
-                what you've learned about their work, and ask specific questions. Don't just ask for referrals — 
-                build genuine connections.
+                This approach gives you a significant upper hand and dramatically higher chances of getting selected for 
+                the recruiter round. It shows genuine interest, product thinking, and initiative — exactly what hiring 
+                managers are looking for. Don't just ask for referrals — demonstrate value first.
               </p>
             </div>
 
@@ -833,6 +843,14 @@ export default function Home() {
             >
               LinkedIn
             </a>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-lg p-6 border border-purple-500/30 mb-6">
+            <p className="text-lg font-semibold mb-2 text-purple-400">Spotnana is Hiring</p>
+            <p className="text-gray-300 leading-relaxed">
+              We're actively hiring Product Managers and AI Engineers at Spotnana. We'll be posting all open positions 
+              in the coming weeks. If you're interested in joining our team, feel free to reach out.
+            </p>
           </div>
 
           <p className="text-gray-500 mb-4">
