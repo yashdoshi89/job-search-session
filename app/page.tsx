@@ -617,10 +617,15 @@ export default function Home() {
                 Job postings get hundreds of applications in the first 48 hours. Apply within 24-48 hours to maximize 
                 your visibility. Have a template application ready, but customize it for each role.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed mb-3">
                 <strong className="text-white">Equally important:</strong> Don't just apply — leverage your connections for referrals. 
                 Connect with people at target companies, ask them to refer you, and ask them to start a thread with the hiring manager 
                 to introduce you. A warm introduction dramatically increases your chances of getting past the initial screening.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                <strong className="text-white">For absolute fit roles:</strong> When a position is a perfect match to your experience, 
+                go the extra mile — reach out to the hiring manager, check their product demo, and send 3-4 feature ideas with a quick 
+                prototype or presentation. This technique has helped me secure job offers in the past.
               </p>
             </div>
 
@@ -661,7 +666,27 @@ export default function Home() {
             </div>
 
             <div className="bg-dark-surface rounded-lg p-6 border border-gray-800">
-              <h3 className="text-xl font-semibold mb-3 text-yellow-400">5. Doubling Down on Strengths</h3>
+              <h3 className="text-xl font-semibold mb-3 text-indigo-400">5. Going the Extra Mile for Perfect Fit Roles</h3>
+              <p className="text-gray-300 leading-relaxed mb-3">
+                When applying for jobs where you feel this is an <strong className="text-white">absolute fit</strong> to your prior experience 
+                or projects you have worked on, then take some extra effort:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4 mb-3">
+                <li>Reach out directly to the hiring manager</li>
+                <li>Check the demo of their existing product</li>
+                <li>Give 3-4 feature ideas that you would develop</li>
+                <li>Preferably create a quick prototype using Cursor/Claude code and send it across</li>
+                <li>Or put your ideas in a presentation and send it</li>
+              </ul>
+              <p className="text-gray-300 leading-relaxed">
+                Yes, you will spend an hour for a few positions, but it dramatically increases your chances of getting 
+                an interview call. <strong className="text-white">I have gotten a job offer using this technique in the past.</strong> 
+                This level of initiative and product thinking is exactly what sets you apart from hundreds of other applicants.
+              </p>
+            </div>
+
+            <div className="bg-dark-surface rounded-lg p-6 border border-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-yellow-400">6. Doubling Down on Strengths</h3>
               <p className="text-gray-300 leading-relaxed">
                 Identify your unique strengths (data, AI, B2B, growth, etc.) and target roles that align. 
                 Don't try to be everything to everyone. Depth in a specific area is more valuable than 
